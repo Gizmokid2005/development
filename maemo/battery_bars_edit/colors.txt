@@ -1,0 +1,35 @@
+Modifications done using Photoshop Gradient Tool :)
+
+b: bright
+d: dark
+
+full100
+b: 8bc500
+d: 74b940
+full88
+b: 8dc402
+d: 64a532
+full75
+b: beb729
+d: a79822
+full63
+b: d4b13b
+d: c8820e
+full50
+b: ebab4d
+d: df7300
+full38
+b: eb9549
+d: d9600b
+full25
+b: e5573a
+d: db4e2a
+full13
+b: e93a3a
+d: c92d29
+low
+b: e80c33
+d: c41d33
+
+greetz,
+sar3th
