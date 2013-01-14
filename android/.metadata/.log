@@ -1,0 +1,406 @@
+!SESSION 2013-01-13 18:19:08.155 -----------------------------------------------
+eclipse.buildId=v21.0.1-543035
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2013-01-13 18:19:43.379
+!MESSAGE DDMS files not found: C:\android\eclipse\platform-tools\adb.exe C:\android\eclipse\tools\hprof-conv.exe C:\android\eclipse\tools\traceview.bat 
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-13 18:23:00.404
+!MESSAGE Failed to load properties file for project 'MyFirstApp'
+!SESSION 2013-01-13 18:38:12.264 -----------------------------------------------
+eclipse.buildId=v21.0.1-543035
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.jface 4 2 2013-01-13 18:38:51.565
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.junit.InstrumentationRunnerValidator.<init>(InstrumentationRunnerValidator.java:48)
+	at com.android.ide.eclipse.adt.internal.launch.junit.InstrumentationRunnerValidator.<init>(InstrumentationRunnerValidator.java:59)
+	at com.android.ide.eclipse.adt.internal.launch.junit.AndroidJUnitLaunchConfigurationTab.loadInstrumentations(AndroidJUnitLaunchConfigurationTab.java:1020)
+	at com.android.ide.eclipse.adt.internal.launch.junit.AndroidJUnitLaunchConfigurationTab.initializeFrom(AndroidJUnitLaunchConfigurationTab.java:373)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup.initializeFrom(AbstractLaunchConfigurationTabGroup.java:86)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupWrapper.initializeFrom(LaunchConfigurationTabGroupWrapper.java:194)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.displayInstanceTabs(LaunchConfigurationTabGroupViewer.java:753)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$8.run(LaunchConfigurationTabGroupViewer.java:624)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.inputChanged(LaunchConfigurationTabGroupViewer.java:641)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput0(LaunchConfigurationTabGroupViewer.java:603)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput(LaunchConfigurationTabGroupViewer.java:579)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.handleLaunchConfigurationSelectionChanged(LaunchConfigurationsDialog.java:941)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog$3.selectionChanged(LaunchConfigurationsDialog.java:560)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:888)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:886)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1726)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1139)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView.handleConfigurationAdded(LaunchConfigurationView.java:283)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView.access$1(LaunchConfigurationView.java:272)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView$2.run(LaunchConfigurationView.java:261)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 2 2013-01-13 18:38:55.679
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.junit.InstrumentationRunnerValidator.<init>(InstrumentationRunnerValidator.java:48)
+	at com.android.ide.eclipse.adt.internal.launch.junit.InstrumentationRunnerValidator.<init>(InstrumentationRunnerValidator.java:59)
+	at com.android.ide.eclipse.adt.internal.launch.junit.AndroidJUnitLaunchConfigurationTab.loadInstrumentations(AndroidJUnitLaunchConfigurationTab.java:1020)
+	at com.android.ide.eclipse.adt.internal.launch.junit.AndroidJUnitLaunchConfigurationTab.initializeFrom(AndroidJUnitLaunchConfigurationTab.java:373)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup.initializeFrom(AbstractLaunchConfigurationTabGroup.java:86)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupWrapper.initializeFrom(LaunchConfigurationTabGroupWrapper.java:194)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.displayInstanceTabs(LaunchConfigurationTabGroupViewer.java:753)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$8.run(LaunchConfigurationTabGroupViewer.java:624)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.inputChanged(LaunchConfigurationTabGroupViewer.java:641)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput0(LaunchConfigurationTabGroupViewer.java:603)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput(LaunchConfigurationTabGroupViewer.java:579)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.handleLaunchConfigurationSelectionChanged(LaunchConfigurationsDialog.java:941)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog$3.selectionChanged(LaunchConfigurationsDialog.java:560)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:888)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:886)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1226)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1251)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:262)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:256)
+	at org.eclipse.jface.util.OpenStrategy$3.run(OpenStrategy.java:433)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-13 18:41:42.032
+!MESSAGE An internal error occurred during: "Launching New_configuration (1)".
+!STACK 0
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.getProject(LaunchConfigDelegate.java:368)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:117)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-01-13 18:43:16.012 -----------------------------------------------
+eclipse.buildId=v21.0.1-543035
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.ui 4 0 2013-01-13 18:47:16.477
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.AvdCompatibility.canRun(AvdCompatibility.java:50)
+	at com.android.ide.eclipse.adt.internal.launch.EmulatorConfigTab$8.accept(EmulatorConfigTab.java:399)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.fillTable(AvdSelector.java:797)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.refresh(AvdSelector.java:487)
+	at com.android.ide.eclipse.adt.internal.launch.EmulatorConfigTab.updateAvdList(EmulatorConfigTab.java:385)
+	at com.android.ide.eclipse.adt.internal.launch.EmulatorConfigTab.initializeFrom(EmulatorConfigTab.java:474)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTab.activated(AbstractLaunchConfigurationTab.java:375)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.handleTabSelected(LaunchConfigurationTabGroupViewer.java:1325)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$6.widgetSelected(LaunchConfigurationTabGroupViewer.java:366)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:2746)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1433)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:257)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2013-01-13 18:47:21.327
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.AvdCompatibility.canRun(AvdCompatibility.java:50)
+	at com.android.ide.eclipse.adt.internal.launch.EmulatorConfigTab$8.accept(EmulatorConfigTab.java:399)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.fillTable(AvdSelector.java:797)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.refresh(AvdSelector.java:487)
+	at com.android.sdkuilib.internal.widgets.AvdSelector$8.widgetSelected(AvdSelector.java:345)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2013-01-13 18:47:22.208
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.AvdCompatibility.canRun(AvdCompatibility.java:50)
+	at com.android.ide.eclipse.adt.internal.launch.EmulatorConfigTab$8.accept(EmulatorConfigTab.java:399)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.fillTable(AvdSelector.java:797)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.refresh(AvdSelector.java:487)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.onAvdManager(AvdSelector.java:1089)
+	at com.android.sdkuilib.internal.widgets.AvdSelector.access$700(AvdSelector.java:84)
+	at com.android.sdkuilib.internal.widgets.AvdSelector$9.widgetSelected(AvdSelector.java:357)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-13 18:48:07.224
+!MESSAGE An internal error occurred during: "Launching Nexus7".
+!STACK 0
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.getProject(LaunchConfigDelegate.java:368)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:117)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-01-13 18:51:40.898 -----------------------------------------------
+eclipse.buildId=v21.0.1-543035
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-13 18:52:23.187
+!MESSAGE An internal error occurred during: "Launching Nexus7".
+!STACK 0
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.getProject(LaunchConfigDelegate.java:368)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:117)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-13 19:14:30.152
+!MESSAGE Warning: Ignoring name conflict in resource file for name menu_settings
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-01-13 19:27:30.454
+!MESSAGE No command output when running: 'am start -n com.example.myfirstapp/com.example.myfirstapp.MainActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device 015d2856b6600010
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:453)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(ActivityLaunchAction.java:67)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(ActivityLaunchAction.java:109)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.doLaunchAction(AndroidLaunchController.java:1274)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.doLaunchAction(AndroidLaunchController.java:1286)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(AndroidLaunchController.java:1258)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(AndroidLaunchController.java:903)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.continueLaunch(AndroidLaunchController.java:745)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launch(AndroidLaunchController.java:368)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.doLaunch(LaunchConfigDelegate.java:322)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:238)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
