@@ -1,0 +1,20 @@
+bin\Debug\Flag Viewer Application.exe
+bin\Debug\Flag Viewer Application.pdb
+bin\Debug\Flag Viewer Application.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Flag_Viewer_Application.Form1.resources
+obj\Debug\Flag_Viewer_Application.Resources.resources
+obj\Debug\Flag Viewer Application.vbproj.GenerateResource.Cache
+obj\Debug\Flag Viewer Application.exe
+obj\Debug\Flag Viewer Application.xml
+obj\Debug\Flag Viewer Application.pdb
+bin\Release\Flag Viewer Application.exe
+bin\Release\Flag Viewer Application.pdb
+bin\Release\Flag Viewer Application.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Flag_Viewer_Application.Form1.resources
+obj\Release\Flag_Viewer_Application.Resources.resources
+obj\Release\Flag Viewer Application.vbproj.GenerateResource.Cache
+obj\Release\Flag Viewer Application.exe
+obj\Release\Flag Viewer Application.xml
+obj\Release\Flag Viewer Application.pdb

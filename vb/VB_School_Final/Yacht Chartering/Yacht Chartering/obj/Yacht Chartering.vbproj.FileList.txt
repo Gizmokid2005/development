@@ -1,0 +1,26 @@
+bin\Debug\Yacht Chartering.exe
+bin\Debug\Yacht Chartering.pdb
+bin\Debug\Yacht Chartering.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Yacht_Chartering.Form1.resources
+obj\Debug\Yacht_Chartering.Resources.resources
+obj\Debug\Yacht Chartering.vbproj.GenerateResource.Cache
+obj\Debug\Yacht Chartering.exe
+obj\Debug\Yacht Chartering.xml
+obj\Debug\Yacht Chartering.pdb
+obj\Debug\Yacht_Chartering.About.resources
+obj\Debug\Yacht_Chartering.AddType.resources
+obj\Debug\Yacht_Chartering.DeleteType.resources
+bin\Release\Yacht Chartering.exe
+bin\Release\Yacht Chartering.pdb
+bin\Release\Yacht Chartering.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Yacht_Chartering.About.resources
+obj\Release\Yacht_Chartering.AddType.resources
+obj\Release\Yacht_Chartering.DeleteType.resources
+obj\Release\Yacht_Chartering.Form1.resources
+obj\Release\Yacht_Chartering.Resources.resources
+obj\Release\Yacht Chartering.vbproj.GenerateResource.Cache
+obj\Release\Yacht Chartering.exe
+obj\Release\Yacht Chartering.xml
+obj\Release\Yacht Chartering.pdb

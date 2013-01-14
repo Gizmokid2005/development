@@ -1,0 +1,3 @@
+C:\Documents and Settings\Michael\Desktop\Projects\Flag Viewer Application\Flag Viewer Application\obj\Release\Flag Viewer Application.exe
+C:\Documents and Settings\Michael\Desktop\Projects\Flag Viewer Application\Flag Viewer Application\obj\Release\Flag Viewer Application.xml
+C:\Documents and Settings\Michael\Desktop\Projects\Flag Viewer Application\Flag Viewer Application\obj\Release\Flag Viewer Application.pdb
