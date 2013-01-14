@@ -1,0 +1,40 @@
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.exe
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.pdb
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.xml
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\ResolveAssemblyReference.cache
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod_convertor.main.resources
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod_convertor.Resources.resources
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.vbproj.GenerateResource.Cache
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.exe
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.xml
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.pdb
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.exe
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.pdb
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.xml
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\ResolveAssemblyReference.cache
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod_convertor.main.resources
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod_convertor.Resources.resources
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.vbproj.GenerateResource.Cache
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.exe
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.xml
+\\SERVER\Shared\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.pdb
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.exe
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.xml
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.pdb
+S:\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.exe
+S:\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.pdb
+S:\VB\chmod convertor\chmod convertor\bin\Debug\chmod convertor.xml
+S:\VB\chmod convertor\chmod convertor\obj\Debug\ResolveAssemblyReference.cache
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod_convertor.main.resources
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod_convertor.Resources.resources
+S:\VB\chmod convertor\chmod convertor\obj\Debug\chmod convertor.vbproj.GenerateResource.Cache
+S:\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.exe
+S:\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.pdb
+S:\VB\chmod convertor\chmod convertor\bin\Release\chmod convertor.xml
+S:\VB\chmod convertor\chmod convertor\obj\Release\ResolveAssemblyReference.cache
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod_convertor.main.resources
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod_convertor.Resources.resources
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.vbproj.GenerateResource.Cache
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.exe
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.xml
+S:\VB\chmod convertor\chmod convertor\obj\Release\chmod convertor.pdb
