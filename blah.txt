@@ -1,0 +1,273 @@
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   batch/startvboxvm.bat
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites - Instructions.doc
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/AssemblyInfo.vb
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Crispies Bagels and Bites.sln
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Crispies Bagels and Bites.suo
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Crispies Bagels and Bites.vbproj
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Crispies Bagels and Bites.vbproj.user
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Form1.resx
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/Form1.vb
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/MISC33.ICO
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/REQUEST FOR NEW APPLICATION.doc
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/UpgradeLog.XML
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Crispies Bagels and Bites.vbproj.FileList.txt
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Debug/Crispies Bagels and Bites.exe
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Debug/Crispies Bagels and Bites.pdb
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Debug/Crispies_Bagels_and_Bites.Form1.resources
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Release/Crispies Bagels and Bites.exe
+#	deleted:    vb/VB_Crispies_Bagels_and_Bites/Crispies Bagels and Bites/obj/Release/Crispies_Bagels_and_Bites.Form1.resources
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/AssemblyInfo.vb
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Currency Converter.sln
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Currency Converter.suo
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Currency Converter.vbproj
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Currency Converter.vbproj.user
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Flow Chart.ppt
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Form1.resx
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Form1.vb
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/REQUEST FOR NEW APPLICATION.doc
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/Screen Shot.doc
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/TRFFC14.ICO
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/UpgradeLog.XML
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Currency Converter.vbproj.FileList.txt
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Debug/Currency Converter.exe
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Debug/Currency Converter.pdb
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Debug/Currency Converter.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Debug/Currency Converter.xml
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Debug/Currency_Converter.Form1.resources
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Release/Currency Converter.exe
+#	deleted:    vb/VB_Currency Conversion/Currency Converter/obj/Release/Currency_Converter.Form1.resources
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application.sln
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application.suo
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/Flag Viewer Application.vbproj
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/Form1.Designer.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/Form1.resx
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/Form1.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Application.Designer.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Application.myapp
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/AssemblyInfo.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Resources.Designer.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Resources.resx
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Settings.Designer.vb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/My Project/Settings.settings
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag Viewer Application.exe
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag Viewer Application.pdb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag Viewer Application.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag Viewer Application.xml
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag_Viewer_Application.Form1.resources
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/Flag_Viewer_Application.Resources.resources
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Debug/TempPE/My Project.Resources.Designer.vb.dll
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Flag Viewer Application.vbproj.FileList.txt
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Flag Viewer Application.vbproj.FileListAbsolute.txt
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag Viewer Application.exe
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag Viewer Application.pdb
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag Viewer Application.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag Viewer Application.xml
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag_Viewer_Application.Form1.resources
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/Flag_Viewer_Application.Resources.resources
+#	deleted:    vb/VB_Flag_Viewer_Application/Flag Viewer Application/obj/Release/TempPE/My Project.Resources.Designer.vb.dll
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/AssemblyInfo.vb
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/Form1.resx
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/Form1.vb
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/GPA Calculator.sln
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/GPA Calculator.suo
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/GPA Calculator.vbproj
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/GPA Calculator.vbproj.user
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/MISC22.ICO
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/UpgradeLog.XML
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Debug/GPA Calculator.exe
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Debug/GPA Calculator.pdb
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Debug/GPA Calculator.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Debug/GPA Calculator.xml
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Debug/GPA_Calculator.GPA.resources
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/GPA Calculator.vbproj.FileList.txt
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Release/GPA Calculator.exe
+#	deleted:    vb/VB_GPA_Calculator/GPA Calculator/obj/Release/GPA_Calculator.GPA.resources
+#	deleted:    vb/VB_Guess/Guess/AssemblyInfo.vb
+#	deleted:    vb/VB_Guess/Guess/Form1.resx
+#	deleted:    vb/VB_Guess/Guess/Form1.vb
+#	deleted:    vb/VB_Guess/Guess/Guess.sln
+#	deleted:    vb/VB_Guess/Guess/Guess.vbproj
+#	deleted:    vb/VB_Guess/Guess/Guess.vbproj.user
+#	deleted:    vb/VB_Guess/Guess/QUESTION.ICO
+#	deleted:    vb/VB_Guess/Guess/User Interface 1.doc
+#	deleted:    vb/VB_Guess/Guess/User Interface Ver. 6.doc
+#	deleted:    vb/VB_Guess/Guess/obj/Debug/Guess.exe
+#	deleted:    vb/VB_Guess/Guess/obj/Debug/Guess.pdb
+#	deleted:    vb/VB_Guess/Guess/obj/Release/Guess.Form1.resources
+#	deleted:    vb/VB_Guess/Guess/obj/Release/Guess.exe
+#	deleted:    vb/VB_Guess/green_bean.GIF
+#	deleted:    vb/VB_Guess/red_bean.GIF
+#	deleted:    vb/VB_Guess/yellow_bean.GIF
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/AssemblyInfo.vb
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Form1.resx
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Form1.vb
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/LIGHTOFF.ICO
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Light Bulb.sln
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Light Bulb.suo
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Light Bulb.vbproj
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/Light Bulb.vbproj.user
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/UpgradeLog.XML
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Debug/Light Bulb.exe
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Debug/Light Bulb.pdb
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Debug/Light Bulb.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Debug/Light Bulb.xml
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Debug/Light_Bulb.frmLightBulb.resources
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Light Bulb.vbproj.FileList.txt
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Release/Light Bulb.exe
+#	deleted:    vb/VB_Light_Bulb/Light Bulb/obj/Release/Light_Bulb.frmLightBulb.resources
+#	deleted:    vb/VB_Mastermind/AssemblyInfo.vb
+#	deleted:    vb/VB_Mastermind/Form1.resx
+#	deleted:    vb/VB_Mastermind/Form1.vb
+#	deleted:    vb/VB_Mastermind/Guess.sln
+#	deleted:    vb/VB_Mastermind/Guess.suo
+#	deleted:    vb/VB_Mastermind/Guess.vbproj
+#	deleted:    vb/VB_Mastermind/Guess.vbproj.user
+#	deleted:    vb/VB_Mastermind/Mastermind.resx
+#	deleted:    vb/VB_Mastermind/Mastermind.vb
+#	deleted:    vb/VB_Mastermind/QUESTION.ICO
+#	deleted:    vb/VB_Mastermind/UpgradeLog.XML
+#	deleted:    vb/VB_Mastermind/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_Mastermind/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_Mastermind/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_Mastermind/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_Mastermind/obj/Debug/Guess.exe
+#	deleted:    vb/VB_Mastermind/obj/Debug/Guess.pdb
+#	deleted:    vb/VB_Mastermind/obj/Release/Guess.Mastermind.resources
+#	deleted:    vb/VB_Mastermind/obj/Release/Guess.exe
+#	deleted:    vb/VB_Mastermind/obj/Release/Mastermind.exe
+#	deleted:    vb/VB_School_Final/AboutDoc.doc
+#	deleted:    vb/VB_School_Final/AboutPseduoCode.doc
+#	deleted:    vb/VB_School_Final/AddTypeDoc.doc
+#	deleted:    vb/VB_School_Final/AddTypePseduoCode.doc
+#	deleted:    vb/VB_School_Final/DeleteTypeDoc.doc
+#	deleted:    vb/VB_School_Final/DeleteTypePseduoCode.doc
+#	deleted:    vb/VB_School_Final/Form1Doc.doc
+#	deleted:    vb/VB_School_Final/Form1PseduoCode.doc
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering.sln
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering.suo
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/About.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/About.resx
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/About.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/AddType.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/AddType.resx
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/AddType.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/DeleteType.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/DeleteType.resx
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/DeleteType.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/Form1.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/Form1.resx
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/Form1.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Application.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Application.myapp
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/AssemblyInfo.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Resources.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Resources.resx
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Settings.Designer.vb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/My Project/Settings.settings
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/Yacht Chartering.vbproj
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/TempPE/My Project.Resources.Designer.vb.dll
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht Chartering.exe
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht Chartering.pdb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht Chartering.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht Chartering.xml
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht_Chartering.About.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht_Chartering.AddType.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht_Chartering.DeleteType.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht_Chartering.Form1.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Debug/Yacht_Chartering.Resources.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/TempPE/My Project.Resources.Designer.vb.dll
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht Chartering.exe
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht Chartering.pdb
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht Chartering.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht Chartering.xml
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht_Chartering.About.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht_Chartering.AddType.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht_Chartering.DeleteType.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht_Chartering.Form1.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Release/Yacht_Chartering.Resources.resources
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Yacht Chartering.vbproj.FileList.txt
+#	deleted:    vb/VB_School_Final/Yacht Chartering/Yacht Chartering/obj/Yacht Chartering.vbproj.FileListAbsolute.txt
+#	deleted:    vb/VB_School_Final/Yachts.ppt
+#	deleted:    vb/VB_Skate_away_sales/REQUEST FOR NEW APPLICATION.doc
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/AssemblyInfo.vb
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Form1.resx
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Form1.vb
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Skate Away Sales.vbproj.user
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Skate Away Sales2.sln
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Skate Away Sales2.vbproj
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/Skate Away Sales2.vbproj.user
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/TRFFC19A.ICO
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/obj/Debug/Skate Away Sales2.exe
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/obj/Debug/Skate Away Sales2.pdb
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/obj/Release/Skate Away Sales2.exe
+#	deleted:    vb/VB_Skate_away_sales/Skate Away Sales/obj/Release/Skate_Away_Sales2.Form1.resources
+#	deleted:    vb/VB_Skate_away_sales/TOE Chart.doc
+#	deleted:    vb/VB_Skate_away_sales/User Interface.doc
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/AssemblyInfo.vb
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Form1.resx
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Form1.vb
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/MISC20.ICO
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Tic-Tac-Toe.sln
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Tic-Tac-Toe.suo
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Tic-Tac-Toe.vbproj
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/Tic-Tac-Toe.vbproj.user
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/UpgradeLog.XML
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/_UpgradeReport_Files/UpgradeReport.css
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/_UpgradeReport_Files/UpgradeReport.xslt
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/_UpgradeReport_Files/UpgradeReport_Minus.gif
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/_UpgradeReport_Files/UpgradeReport_Plus.gif
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Debug/Tic-Tac-Toe.exe
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Debug/Tic-Tac-Toe.pdb
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Debug/Tic-Tac-Toe.vbproj.GenerateResource.Cache
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Debug/Tic-Tac-Toe.xml
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Debug/Tic_Tac_Toe.Form1.resources
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Release/Tic-Tac-Toe.exe
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Release/Tic_Tac_Toe.Form1.resources
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe/obj/Tic-Tac-Toe.vbproj.FileListAbsolute.txt
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/AssemblyInfo.vb
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/Form1.resx
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/Form1.vb
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/MISC20.ICO
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/Tic-Tac-Toe.sln
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/Tic-Tac-Toe.vbproj
+#	deleted:    vb/VB_Tic-Tac-Toe/Tic-Tac-Toe_Backup/Backup/Tic-Tac-Toe.vbproj.user
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	blah.txt
+#	vb/Crispies Bagels and Bites/
+#	vb/Currency Conversion/
+#	vb/Final/
+#	vb/Flag Viewer Application/
+#	vb/GPA CALCULATOR/
+#	vb/Guess/
+#	vb/Light Bulb/
+#	vb/Mastermind/
+#	vb/Skate away sales/
+#	vb/Tic-Tac-Toe/

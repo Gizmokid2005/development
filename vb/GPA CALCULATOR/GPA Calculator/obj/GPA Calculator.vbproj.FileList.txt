@@ -1,0 +1,9 @@
+obj\Debug\GPA Calculator.exe
+obj\Debug\GPA Calculator.pdb
+bin\GPA Calculator.exe
+bin\GPA Calculator.pdb
+bin\GPA Calculator.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\GPA_Calculator.GPA.resources
+obj\Debug\GPA Calculator.vbproj.GenerateResource.Cache
+obj\Debug\GPA Calculator.xml

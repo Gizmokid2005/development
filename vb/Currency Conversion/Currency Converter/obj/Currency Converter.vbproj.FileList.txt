@@ -1,0 +1,9 @@
+obj\Debug\Currency Converter.exe
+obj\Debug\Currency Converter.pdb
+bin\Currency Converter.exe
+bin\Currency Converter.pdb
+bin\Currency Converter.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Currency_Converter.Form1.resources
+obj\Debug\Currency Converter.vbproj.GenerateResource.Cache
+obj\Debug\Currency Converter.xml
