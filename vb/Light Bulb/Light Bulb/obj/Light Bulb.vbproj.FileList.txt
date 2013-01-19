@@ -1,9 +1,0 @@
-obj\Debug\Light Bulb.exe
-obj\Debug\Light Bulb.pdb
-bin\Light Bulb.exe
-bin\Light Bulb.pdb
-bin\Light Bulb.xml
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Light_Bulb.frmLightBulb.resources
-obj\Debug\Light Bulb.vbproj.GenerateResource.Cache
-obj\Debug\Light Bulb.xml

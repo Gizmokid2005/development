@@ -1,2 +1,0 @@
-obj\Debug\Crispies Bagels and Bites.exe
-obj\Debug\Crispies Bagels and Bites.pdb

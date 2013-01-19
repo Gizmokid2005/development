@@ -1,9 +1,0 @@
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\Tic-Tac-Toe.exe
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\Tic-Tac-Toe.pdb
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\bin\Tic-Tac-Toe.exe
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\bin\Tic-Tac-Toe.pdb
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\bin\Tic-Tac-Toe.xml
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\ResolveAssemblyReference.cache
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\Tic_Tac_Toe.Form1.resources
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\Tic-Tac-Toe.vbproj.GenerateResource.Cache
-D:\My Documents\Projects\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\Tic-Tac-Toe.xml

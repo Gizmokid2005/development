@@ -1,6 +1,0 @@
-C:\Documents and Settings\Michael\Desktop\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.exe
-C:\Documents and Settings\Michael\Desktop\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.xml
-C:\Documents and Settings\Michael\Desktop\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.pdb
-D:\My Documents\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.exe
-D:\My Documents\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.xml
-D:\My Documents\Projects\Final\Yacht Chartering\Yacht Chartering\obj\Release\Yacht Chartering.pdb
