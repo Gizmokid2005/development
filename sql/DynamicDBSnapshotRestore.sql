@@ -1,14 +1,14 @@
 -- =============================================
 -- Author:		Alex Host & Michael Secord
--- Create date: 12/19/2012
+-- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.2.1
+-- Version:		1.3
 -- =============================================
-use [master]
 
+USE MASTER;
 DECLARE 
 		/*--- Database name ---*/
-		@Database NVARCHAR(50) = 'DB_Name'
+		@Database NVARCHAR(50) = 'DBName'
 		
 		/*--- What to do? ---*/
 		/*--- 1=Create 2=Restore ---*/
@@ -44,8 +44,8 @@ SELECT @SQL
 
 -- =============================================
 /*				RELEASE NOTES
-v1.2.1 - 01/08/2013
-* Added a use master to the beginning to stop complaints about using the db you're restoring.
+v1.3 - 01/30/2013
+* Added Use Master to prevent the script locking the database
 -----
 v1.2 - 12/27/2012
 * Fixed another issue with Restore. "GO" Isn't allowed in an exec. - Thanks Steven G
@@ -56,7 +56,11 @@ v1.1 - 12/27/2012
 * Added version to header.
 -----
 v1.0 - 12/19/2012
-* Initial Release
-
+* Added multi-server support
+* Preview mode
+* Additional comments
+-----
+V0.9 – 11/26/2012
+* Limited release beta version
 */
 -- =============================================
