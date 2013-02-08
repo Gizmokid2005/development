@@ -13,11 +13,12 @@ else 	svn up && \
 		cd build/ && \
 		mingw32-make.exe -j install && \
 		filename=$(/c/Program\ Files\ \(x86\)/NSIS/makensis.exe KVIrc.nsi | grep OutFile: | grep -oE '[^"]+.exe' | sed 's/.exe$//') && \
-		/c/Program\ Files/7-Zip/7z.exe a -t7z $filename.7z $filename.exe
+		/c/Program\ Files/7-Zip/7z.exe a -t7z $filename.7z release/
 		#Generate ftp command file
 		echo 'open <host>' > ftp.txt && \
 		echo '<user>' >> ftp.txt && \
 		echo '<pass>' >> ftp.txt && \
+		echo 'binary' >> ftp.txt && \
 		echo 'cd public_html/KVIrc4_nightly'	>> ftp.txt && \
 		echo 'mkdir r'$svnver >> ftp.txt && \
 		echo 'quote SITE chmod 777 r'$svnver >> ftp.txt && \
