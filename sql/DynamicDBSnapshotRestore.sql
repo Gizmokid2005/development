@@ -2,7 +2,7 @@
 -- Author:		Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.3
+-- Version:		1.4
 -- =============================================
 
 USE MASTER;
@@ -42,25 +42,31 @@ EXEC(@SQL)
 ELSE
 SELECT @SQL
 
+exec ('use ' + @Database + ' update dbo.LedgerSetup set UseDirectConnect = 0')
+
+
 -- =============================================
 /*				RELEASE NOTES
-v1.3 - 01/30/2013
-* Added Use Master to prevent the script locking the database
+v1.4 - 02/15/2013 - MS
+* Added GP Direct connect disable during the restore process.
 -----
-v1.2 - 12/27/2012
+v1.3 - 01/30/2013 - AH
+* Added Use Master to prevent the script locking the database.
+-----
+v1.2 - 12/27/2012 - MS
 * Fixed another issue with Restore. "GO" Isn't allowed in an exec. - Thanks Steven G
 -----
-v1.1 - 12/27/2012
+v1.1 - 12/27/2012 - MS
 * Fixed issue on line 31 - looking for the wrong INT to restore.
 * Fixed quote issue on line 34 - Thanks Steven G!
 * Added version to header.
 -----
-v1.0 - 12/19/2012
+v1.0 - 12/19/2012 - MS
 * Added multi-server support
 * Preview mode
 * Additional comments
 -----
-V0.9 – 11/26/2012
+V0.9 – 11/26/2012 - AH/MS
 * Limited release beta version
 */
 -- =============================================
