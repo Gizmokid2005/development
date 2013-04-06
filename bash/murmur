@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+# chkconfig: 35 90 12
+# description: Murmur Service
+# processname: murmur
+#
+
+# Source function library.
+[ -f /etc/rc.d/init.d/functions ] || exit 0
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+PROG=/path/to/murmur.x86
+ARGS="-ini /path/to/murmur.ini"
+LOCK=/path/to/lock
+pidfile=${PIDFILE-/path/to/murmur.pid}
+
+# Start the service Murmur
+start() {
+        echo -n $"Starting Murmur server: "
+        daemon --user mumble $PROG $ARGS
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && su - mumble -c'touch \$LOCK'
+        return $RETVAL
+}
+
+# Restart the service Murmur
+stop() {
+        echo -n $"Stopping Murmur server: "
+        killproc -p ${pidfile}
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && su - mumble -c'rm -f \$LOCK'
+        return $RETVAL
+}
+
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status murmur
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|status|restart|reload|condrestart}"
+        exit 1
+esac
+
+exit $RETVAL
+
