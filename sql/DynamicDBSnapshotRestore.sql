@@ -2,7 +2,7 @@
 -- Author:		Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.4
+-- Version:		1.5
 -- =============================================
 
 USE MASTER;
@@ -19,11 +19,12 @@ DECLARE
 		,@Run INT = 1
 
 /*--- Here's where we do the magic. No need to change anything below here ---*/
-DECLARE @Server INT = CASE WHEN @@SERVERNAME = 'VMCUSTOMERS' THEN 1 WHEN @@SERVERNAME = 'VMSQL11' THEN 2 WHEN @@SERVERNAME = 'VMMANHATTAN' THEN 3 WHEN @@SERVERNAME = 'VMTAYLOR' THEN 4 WHEN @@SERVERNAME = 'VMANDREWS' THEN 1 ELSE 1 END
+DECLARE @Server INT = CASE WHEN @@SERVERNAME = 'VMCUSTOMERS' THEN 1 WHEN @@SERVERNAME = 'VMSQL11' THEN 2 WHEN @@SERVERNAME = 'VMMANHATTAN' THEN 3 WHEN @@SERVERNAME = 'VMTAYLOR' THEN 4 WHEN @@SERVERNAME = 'VMANDREWS' THEN 1 WHEN @@SERVERNAME = 'VMCOKECUSTOMERS' THEN 3 ELSE 1 END
 DECLARE @Drive NVARCHAR(1) = CASE WHEN @Server IN (1,4) THEN 'D' WHEN @Server = 2 THEN 'E' WHEN @Server = 3 THEN 'C' END
 DECLARE @SQL NVARCHAR(MAX) = CASE 
 WHEN @CreateOrRestore = 1 THEN
       'USE MASTER;' + CHAR(10)+CHAR(13) +
+	  'DBCC SHRINKDATABASE (' + @Database + ',5)' +
       'CREATE DATABASE Snapshot_' + @Database + '' + CHAR(10)+CHAR(13) +
       'ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\Primary_Snapshot_'   + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
               ',(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\Blobs_Snapshot_'     + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
@@ -47,6 +48,12 @@ exec ('use ' + @Database + ' update dbo.LedgerSetup set UseDirectConnect = 0')
 
 -- =============================================
 /*				RELEASE NOTES
+v1.6 - 07/12/2013 - MS
+* Added DB Shrink to 5% to help decrease space requirements.
+-----
+v1.5 - 04/18/2013 - MS
+* Added support for VMCOKECUSTOMERS server.
+-----
 v1.4 - 02/15/2013 - MS
 * Added GP Direct connect disable during the restore process.
 -----
