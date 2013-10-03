@@ -2,7 +2,7 @@
 -- Author:		Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.7
+-- Version:		1.8
 -- =============================================
 
 USE master;
@@ -31,13 +31,15 @@ DECLARE @SQL NVARCHAR(MAX) = CASE WHEN @HHDays = -1 THEN '' ELSE 'USE ' + @Datab
 CASE 
 WHEN @CreateOrRestore = 1 THEN
       'USE MASTER;' + CHAR(10)+CHAR(13) +
+      'ALTER DATABASE '   + @Database + ' SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
 	  'DBCC SHRINKDATABASE (' + @Database + ',5)' +
       'CREATE DATABASE Snapshot_' + @Database + '' + CHAR(10)+CHAR(13) +
       'ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\Primary_Snapshot_'   + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
               ',(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\Blobs_Snapshot_'     + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
               ',(NAME = N''InventoryFile'', FILENAME = ''' + @Drive + ':\DB\Inventory_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
               ',(NAME = N''OrdersFile'', FILENAME = ''' + @Drive + ':\DB\Orders_Snapshot_'    + @Database + '.ss'')' + CHAR(10)+CHAR(13) + CASE WHEN @Server <> 4 THEN ' ' WHEN @Server = 4 THEN ',(NAME = N''SSD1File'', FILENAME = ''' + @Drive + ':\DB\SSD1_Snapshot_'+ @Database + '.ss'')' + CHAR(10)+CHAR(13) ELSE ' ' END +
-      'AS SNAPSHOT OF ' + @Database
+      'AS SNAPSHOT OF ' + @Database + CHAR(10)+CHAR(13) +
+      'ALTER DATABASE '   + @Database + ' SET MULTI_USER'
 WHEN @CreateOrRestore = 2 THEN
       'USE MASTER' + CHAR(10)+CHAR(13) +
       'ALTER DATABASE '   + @Database + ' SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
@@ -64,8 +66,11 @@ SELECT @DC
 
 -- =============================================
 /*				RELEASE NOTES
+v1.8 - 09/23/2013 - MS
+* Added Single user mode during snapshot creation process.
+-----
 v1.7 - 08/15/2013 - MS
-* Added option to trim HH logs (deleting from dbo.HandheldLog only)
+* Added option to trim HH logs (deleting from dbo.HandheldLog only).
 * Added safeguard to change Ozarks' GP server to local copy instead of live.
 -----
 v1.6 - 07/12/2013 - MS
