@@ -2,7 +2,7 @@
 -- Author:		Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.8
+-- Version:		1.9
 -- =============================================
 
 USE master;
@@ -27,26 +27,26 @@ DECLARE
 --#region This is where the magic SQL lives
 DECLARE @Server INT = CASE WHEN @@SERVERNAME = 'VMCUSTOMERS' THEN 1 WHEN @@SERVERNAME = 'VMSQL11' THEN 2 WHEN @@SERVERNAME = 'VMMANHATTAN' THEN 3 WHEN @@SERVERNAME = 'VMTAYLOR' THEN 4 WHEN @@SERVERNAME = 'VMANDREWS' THEN 1 WHEN @@SERVERNAME = 'VMCOKECUSTOMERS' THEN 3 ELSE 1 END
 DECLARE @Drive NVARCHAR(1) = CASE WHEN @Server IN (1,4) THEN 'D' WHEN @Server = 2 THEN 'E' WHEN @Server = 3 THEN 'C' END
-DECLARE @SQL NVARCHAR(MAX) = CASE WHEN @HHDays = -1 THEN '' ELSE 'USE ' + @Database + ';' + CHAR(10)+CHAR(13) + 'DELETE FROM dbo.HandheldLog WHERE DATEDIFF(D,TimeStamp,GETDATE()) > ' + CAST(@HHDays AS NVARCHAR) + CHAR(10)+CHAR(13) END +
+DECLARE @SQL NVARCHAR(MAX) = CASE WHEN @HHDays = -1 THEN '' ELSE 'USE [' + @Database + '];' + CHAR(10)+CHAR(13) + 'DELETE FROM dbo.HandheldLog WHERE DATEDIFF(D,TimeStamp,GETDATE()) > ' + CAST(@HHDays AS NVARCHAR) + CHAR(10)+CHAR(13) END +
 CASE 
 WHEN @CreateOrRestore = 1 THEN
       'USE MASTER;' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE '   + @Database + ' SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
-	  'DBCC SHRINKDATABASE (' + @Database + ',5)' +
-      'CREATE DATABASE Snapshot_' + @Database + '' + CHAR(10)+CHAR(13) +
-      'ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\Primary_Snapshot_'   + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
-              ',(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\Blobs_Snapshot_'     + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
+      'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
+	  'DBCC SHRINKDATABASE ([' + @Database + '],5)' +
+      'CREATE DATABASE [Snapshot_' + @Database + ']' + CHAR(10)+CHAR(13) +
+      'ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\Primary_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
+              ',(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\Blobs_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
               ',(NAME = N''InventoryFile'', FILENAME = ''' + @Drive + ':\DB\Inventory_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
-              ',(NAME = N''OrdersFile'', FILENAME = ''' + @Drive + ':\DB\Orders_Snapshot_'    + @Database + '.ss'')' + CHAR(10)+CHAR(13) + CASE WHEN @Server <> 4 THEN ' ' WHEN @Server = 4 THEN ',(NAME = N''SSD1File'', FILENAME = ''' + @Drive + ':\DB\SSD1_Snapshot_'+ @Database + '.ss'')' + CHAR(10)+CHAR(13) ELSE ' ' END +
-      'AS SNAPSHOT OF ' + @Database + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE '   + @Database + ' SET MULTI_USER'
+              ',(NAME = N''OrdersFile'', FILENAME = ''' + @Drive + ':\DB\Orders_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) + CASE WHEN @Server <> 4 THEN ' ' WHEN @Server = 4 THEN ',(NAME = N''SSD1File'', FILENAME = ''' + @Drive + ':\DB\SSD1_Snapshot_'+ @Database + '.ss'')' + CHAR(10)+CHAR(13) ELSE ' ' END +
+      'AS SNAPSHOT OF [' + @Database + ']' + CHAR(10)+CHAR(13) +
+      'ALTER DATABASE [' + @Database + '] SET MULTI_USER'
 WHEN @CreateOrRestore = 2 THEN
       'USE MASTER' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE '   + @Database + ' SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
-      'RESTORE DATABASE ' + @Database + ' FROM DATABASE_SNAPSHOT = ''Snapshot_' + @Database + ''';' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE '   + @Database + ' SET MULTI_USER'
+      'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
+      'RESTORE DATABASE [' + @Database + '] FROM DATABASE_SNAPSHOT = ''Snapshot_[' + @Database + ']'';' + CHAR(10)+CHAR(13) +
+      'ALTER DATABASE [' + @Database + '] SET MULTI_USER'
 END
-DECLARE @DC NVARCHAR(150) = CASE WHEN @Database like 'Ozarks%' THEN 'USE ' + @Database + ' UPDATE dbo.LedgerSetup SET DirectConnectServerName = ''VMGPOZARKS''' ELSE '' END
+DECLARE @DC NVARCHAR(150) = CASE WHEN @Database like 'Ozarks%' THEN 'USE [' + @Database + '] UPDATE dbo.LedgerSetup SET DirectConnectServerName = ''VMGPOZARKS''' ELSE '' END
 
 IF @Run = 1
 EXEC(@SQL)
@@ -54,9 +54,9 @@ ELSE
 SELECT @SQL
 
 IF @Run = 1
-EXEC ('USE ' + @Database + ' UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
+EXEC ('USE [' + @Database + '] UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
 ELSE
-SELECT ('USE ' + @Database + ' UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
+SELECT ('USE [' + @Database + '] UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
 
 IF @Run = 1
 EXEC (@DC)
@@ -66,6 +66,9 @@ SELECT @DC
 
 -- =============================================
 /*				RELEASE NOTES
+v1.9 - 10/09/2013 - AH/MS
+* Updated so databases with hyphens will work in this script as well.
+-----
 v1.8 - 09/23/2013 - MS
 * Added Single user mode during snapshot creation process.
 -----
