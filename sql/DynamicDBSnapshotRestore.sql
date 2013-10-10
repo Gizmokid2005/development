@@ -2,7 +2,7 @@
 -- Author:		Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.9
+-- Version:		1.10
 -- =============================================
 
 USE master;
@@ -43,7 +43,7 @@ WHEN @CreateOrRestore = 1 THEN
 WHEN @CreateOrRestore = 2 THEN
       'USE MASTER' + CHAR(10)+CHAR(13) +
       'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
-      'RESTORE DATABASE [' + @Database + '] FROM DATABASE_SNAPSHOT = ''Snapshot_[' + @Database + ']'';' + CHAR(10)+CHAR(13) +
+      'RESTORE DATABASE [' + @Database + '] FROM DATABASE_SNAPSHOT = ''Snapshot_' + @Database + ''';' + CHAR(10)+CHAR(13) +
       'ALTER DATABASE [' + @Database + '] SET MULTI_USER'
 END
 DECLARE @DC NVARCHAR(150) = CASE WHEN @Database like 'Ozarks%' THEN 'USE [' + @Database + '] UPDATE dbo.LedgerSetup SET DirectConnectServerName = ''VMGPOZARKS''' ELSE '' END
@@ -66,6 +66,9 @@ SELECT @DC
 
 -- =============================================
 /*				RELEASE NOTES
+v1.10 - 10/10/2013 - MS
+* Updated the restore section properly. *sigh*
+-----
 v1.9 - 10/09/2013 - AH/MS
 * Updated so databases with hyphens will work in this script as well.
 -----
