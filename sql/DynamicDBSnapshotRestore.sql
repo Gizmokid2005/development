@@ -1,19 +1,19 @@
 -- =============================================
--- Author:		Alex Host & Michael Secord
+-- Author:      Alex Host & Michael Secord
 -- Create date: 01/30/2013
 -- Last update: 01/30/2014
--- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.19
+-- Description: Dynamic DB Snapshot and Restore Script.
+-- Version:     1.19
 -- =============================================
 
 USE master;
 DECLARE 
-		/*--- Database name ---*/
-		@Database NVARCHAR(50) = 'DBName'
-		
-		/*--- What to do? ---*/
-		/*--- 1=Create 2=Restore ---*/
-		,@CreateOrRestore INT = 1
+        /*--- Database name ---*/
+        @Database NVARCHAR(50) = 'DBName'
+        
+        /*--- What to do? ---*/
+        /*--- 1=Create 2=Restore ---*/
+        ,@CreateOrRestore INT = 1
 
         /*--- Number of days to keep HH logs ---*/
         /*--- -1=Keep all logs ---*/
@@ -23,10 +23,10 @@ DECLARE
         /*--- Shrink DB? ---*/
         /*--- 1=Yes; 0=No ---*/
         ,@Shrink BIT = 1
-		
-		/*--- This can be left alone unless you need to debug ---*/
-		/*--- 1=Run 0=Preview Script ---*/
-		,@Run BIT = 1
+        
+        /*--- This can be left alone unless you need to debug ---*/
+        /*--- 1=Run 0=Preview Script ---*/
+        ,@Run BIT = 1
 
         /*--- This is to override automatic snapshot drive handling. ---*/
         /*--- Script assumes localhost will have two drives and snapshot to D: ----*/
@@ -72,7 +72,7 @@ SELECT @SQL
 --#endregion
 
 -- =============================================
-/*				RELEASE NOTES
+/*                RELEASE NOTES
 v1.19 - 01/30/14 - MS
 * Updated to disable single-user mode by default.
 -----
