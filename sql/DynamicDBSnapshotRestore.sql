@@ -1,71 +1,114 @@
 -- =============================================
--- Author:		Alex Host & Michael Secord
+-- Author:      Alex Host & Michael Secord
 -- Create date: 01/30/2013
--- Description:	Dynamic DB Snapshot and Restore Script.
--- Version:		1.10
+-- Last update: 06/16/2014
+-- Description: Dynamic DB Snapshot and Restore Script.
+-- Version:     1.20
 -- =============================================
 
 USE master;
 DECLARE 
-		/*--- Database name ---*/
-		@Database NVARCHAR(50) = 'DBName'
-		
-		/*--- What to do? ---*/
-		/*--- 1=Create 2=Restore ---*/
-		,@CreateOrRestore INT = 1
+        /*--- Database name ---*/
+        @Database NVARCHAR(50) = 'DBName'
+        
+        /*--- What to do? ---*/
+        /*--- 1=Create 2=Restore ---*/
+        ,@CreateOrRestore INT = 1
 
         /*--- Number of days to keep HH logs ---*/
         /*--- -1=Keep all logs ---*/
         /*--- (WARNING: THIS COULD ADD SIGNIFICANT SNAPSHOT CREATION TIME) ---*/
         ,@HHDays INT = -1
-		
-		/*--- This can be left alone unless you need to debug ---*/
-		/*--- 1=Run 0=Preview Script ---*/
-		,@Run INT = 1
+
+        /*--- Shrink DB? ---*/
+        /*--- 1=Yes; 0=No ---*/
+        ,@Shrink BIT = 1
+        
+        /*--- This can be left alone unless you need to debug ---*/
+        /*--- 1=Run 0=Preview Script ---*/
+        ,@Run BIT = 1
+
+        /*--- This is to override automatic snapshot drive handling. ---*/
+        /*--- Script assumes localhost will have two drives and snapshot to D: ----*/
+        ,@Override NVARCHAR(1) = NULL
+
+        /*--- Single User Mode ---*/
+        /*--- Defaults to off (0). 1=On ---*/
+        ,@SU BIT = 0
 
 /*--- Here's where we do the magic. No need to change anything below here ---*/
 --#region This is where the magic SQL lives
-DECLARE @Server INT = CASE WHEN @@SERVERNAME = 'VMCUSTOMERS' THEN 1 WHEN @@SERVERNAME = 'VMSQL11' THEN 2 WHEN @@SERVERNAME = 'VMMANHATTAN' THEN 3 WHEN @@SERVERNAME = 'VMTAYLOR' THEN 4 WHEN @@SERVERNAME = 'VMANDREWS' THEN 1 WHEN @@SERVERNAME = 'VMCOKECUSTOMERS' THEN 3 ELSE 1 END
-DECLARE @Drive NVARCHAR(1) = CASE WHEN @Server IN (1,4) THEN 'D' WHEN @Server = 2 THEN 'E' WHEN @Server = 3 THEN 'C' END
+DECLARE @Server INT = CASE WHEN @@SERVERNAME = 'VMCUSTOMERS' OR @@SERVERNAME = 'VMANDREWS' THEN 1 WHEN @@SERVERNAME = 'VMSQL11' THEN 2 WHEN @@SERVERNAME = 'VMMANHATTAN' OR @@SERVERNAME = 'VMCOKECUSTOMERS' OR @@SERVERNAME = 'VMTAYLOR' OR @@SERVERNAME = 'VMCUSTOMERS2' THEN 3 WHEN @Override IS NOT NULL THEN 0 ELSE 1 END
+DECLARE @Drive NVARCHAR(1) = CASE WHEN @Server IN (1) THEN 'D' WHEN @Server IN (2) THEN 'E' WHEN @Server IN (3) THEN 'C' WHEN @Server IN (0) THEN @Override END
 DECLARE @SQL NVARCHAR(MAX) = CASE WHEN @HHDays = -1 THEN '' ELSE 'USE [' + @Database + '];' + CHAR(10)+CHAR(13) + 'DELETE FROM dbo.HandheldLog WHERE DATEDIFF(D,TimeStamp,GETDATE()) > ' + CAST(@HHDays AS NVARCHAR) + CHAR(10)+CHAR(13) END +
 CASE 
 WHEN @CreateOrRestore = 1 THEN
-      'USE MASTER;' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
-	  'DBCC SHRINKDATABASE ([' + @Database + '],5)' +
-      'CREATE DATABASE [Snapshot_' + @Database + ']' + CHAR(10)+CHAR(13) +
-      'ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\Primary_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
-              ',(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\Blobs_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
-              ',(NAME = N''InventoryFile'', FILENAME = ''' + @Drive + ':\DB\Inventory_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) +
-              ',(NAME = N''OrdersFile'', FILENAME = ''' + @Drive + ':\DB\Orders_Snapshot_' + @Database + '.ss'')' + CHAR(10)+CHAR(13) + CASE WHEN @Server <> 4 THEN ' ' WHEN @Server = 4 THEN ',(NAME = N''SSD1File'', FILENAME = ''' + @Drive + ':\DB\SSD1_Snapshot_'+ @Database + '.ss'')' + CHAR(10)+CHAR(13) ELSE ' ' END +
-      'AS SNAPSHOT OF [' + @Database + ']' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE [' + @Database + '] SET MULTI_USER'
+    'USE MASTER;
+    ' + CASE WHEN @SU = 1 THEN 'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;' ELSE '' END + '
+    USE [' + @Database + '] UPDATE dbo.LedgerSetup SET UseDirectConnect = 0;
+    USE [' + @Database + ']; IF EXISTS (SELECT t.name FROM sys.tables as t WHERE t.name = ''PalletizationMasterControl'') UPDATE dbo.PalletizationMasterControl SET BlackBoxHostname = ''VMDEV'', BlackBoxPort = ''20202'';
+    IF (SELECT COMPATIBILITY_LEVEL FROM SYS.DATABASES WHERE NAME=''[' + @Database + ']'') < 100 BEGIN ALTER DATABASE [' + @Database + '] SET COMPATIBILITY_LEVEL = 100 END;
+    DELETE FROM [' + @Database + '].dbo.ConcurrencyTokens;
+    ' + CASE WHEN @Database LIKE 'Ozarks%' THEN 'USE [' + @Database + '] UPDATE dbo.LedgerSetup SET DirectConnectServerName = ''VMGPOZARKS'';' ELSE '' END 
+    + CASE WHEN @Shrink = 1 THEN CHAR(10) + CHAR(9) + 'DBCC SHRINKDATABASE ([' + @Database + '],5)' ELSE '' END + '
+    CREATE DATABASE [Snapshot_' + @Database + ']
+    ON     (NAME = N''PrimaryFile'', FILENAME = ''' + @Drive + ':\DB\' + @Database + 'Primary_Snapshot_.ss'')
+           ,(NAME = N''BlobsFile'', FILENAME = ''' + @Drive + ':\DB\' + @Database + 'Blobs_Snapshot_.ss'')
+           ,(NAME = N''InventoryFile'', FILENAME = ''' + @Drive + ':\DB\' + @Database + 'Inventory_Snapshot_.ss'')
+           ,(NAME = N''OrdersFile'', FILENAME = ''' + @Drive + ':\DB\' + @Database + 'Orders_Snapshot_.ss'')' + CASE WHEN @Server <> 4 THEN ' ' WHEN @Server = 4 THEN + CHAR(10) + ',(NAME = N''SSD1File'', FILENAME = ''' + @Drive + ':\DB\'+ @Database + 'SSD1_Snapshot_.ss'')' + CHAR(10) ELSE ' ' END +
+      'AS SNAPSHOT OF [' + @Database + '];
+    ' + CASE WHEN @SU = 1 THEN 'ALTER DATABASE [' + @Database + '] SET MULTI_USER;' ELSE '' END
 WHEN @CreateOrRestore = 2 THEN
-      'USE MASTER' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE' + CHAR(10)+CHAR(13) +
-      'RESTORE DATABASE [' + @Database + '] FROM DATABASE_SNAPSHOT = ''Snapshot_' + @Database + ''';' + CHAR(10)+CHAR(13) +
-      'ALTER DATABASE [' + @Database + '] SET MULTI_USER'
+    'USE MASTER;
+    ' + CASE WHEN @SU = 1 THEN 'ALTER DATABASE [' + @Database + '] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;' ELSE '' END + '
+    RESTORE DATABASE [' + @Database + '] FROM DATABASE_SNAPSHOT = ''Snapshot_' + @Database + ''';
+    ' + CASE WHEN @SU = 1 THEN 'ALTER DATABASE [' + @Database + '] SET MULTI_USER;' ELSE '' END
 END
-DECLARE @DC NVARCHAR(150) = CASE WHEN @Database like 'Ozarks%' THEN 'USE [' + @Database + '] UPDATE dbo.LedgerSetup SET DirectConnectServerName = ''VMGPOZARKS''' ELSE '' END
 
 IF @Run = 1
 EXEC(@SQL)
 ELSE
 SELECT @SQL
-
-IF @Run = 1
-EXEC ('USE [' + @Database + '] UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
-ELSE
-SELECT ('USE [' + @Database + '] UPDATE dbo.LedgerSetup SET UseDirectConnect = 0')
-
-IF @Run = 1
-EXEC (@DC)
-ELSE
-SELECT @DC
 --#endregion
 
 -- =============================================
-/*				RELEASE NOTES
+/*                RELEASE NOTES
+v1.20 - 06/16/14 - MS
+* Changed the filename format for the snapshot files. Database name is now first. (Should have no operational impact).
+-----
+v1.19 - 01/30/14 - MS
+* Updated to disable single-user mode by default.
+-----
+v1.18 - 01/09/14 - MS
+* Changed the BlackBox port to 20202.
+------
+v1.17 - 12/13/13 - MS
+* Cleaned up the SQL a bit more to consolidate how certain updates were running (all DB "fixes" now run prior to snapshot).
+-----
+v1.16 - 12/03/13 - MS
+* Now we check if tables exist before trying to delete from them.
+-----
+v1.15 - 11/27/13 - MS
+* Properly terminated statements to ensure everything processes in order.
+-----
+v1.14 - 11/20/13 - MS
+* Add support for VMCUSTOMERS2
+-----
+v1.13 - 11/14/13 - MS
+* Added bit for DBCC Shrink.
+* We now set BlackBox to our VMDEV instance on snapshot.
+* Cleaned up some of the magic.
+-----
+v1.12 - 11/04/2013 - MS
+* Added support for snapshot drive override.
+* Cleaned up drive setup for VMTaylor.
+-----
+v1.11 - 10/18/2013 - AH & MS
+* Always clear concurrency locks before creating the snapshot.
+* Always force the database into 2008+ compatibility to ensure WMS works.
+* Cleaned up magic SQL.
+* Added updated date to header.
+-----
 v1.10 - 10/10/2013 - MS
 * Updated the restore section properly. *sigh*
 -----
