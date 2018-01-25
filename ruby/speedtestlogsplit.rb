@@ -17,7 +17,7 @@ CSV.open('SpeedTestResults.csv', 'w+') do |c|
       elsif line.start_with?('Cannot')
         @csvline = ""
       elsif line.start_with?(" ")
-        c << @csvline.parse_csv unless @csvline.empty?
+        c << @csvline.parse_csv unless @csvline.empty? || @csvline.scan(/,/).length < 3
         @csvline = ""
       end
     end
